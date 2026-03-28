@@ -17,7 +17,7 @@ st.set_page_config(layout="wide", page_icon="🥊", page_title="FightCast.app")
 st.markdown(
     """
     <h3 style='text-align:center; color:white; margin:0; padding:0;'>
-         UFC Fight Predictor Dashboard
+         Welcome to FightCast 
     </h3>
     <h5 style='text-align:center; font-weight:normal; color:#555;'>
         Compare fighters, break down stats, and predict outcomes with <b>Machine Learning</b>
