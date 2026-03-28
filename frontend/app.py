@@ -11,6 +11,11 @@ import os
 # DO NOT just put the string here. Use os.getenv!
 API_URL = os.getenv("API_URL", "http://backend:8000")
 
+st.set_page_config(
+    page_title="FightCast.app",
+    page_icon="🥊",  # This puts the boxing glove in the browser tab!
+    layout="wide"
+)
 
 # Set wide layout and dashboard title
 st.set_page_config(layout="wide", page_title="UFC Fight Predictor Dashboard")
