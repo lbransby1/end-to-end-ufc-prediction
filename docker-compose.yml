@@ -1,0 +1,22 @@
+# docker-compose.yml
+
+services:
+  backend:
+    build: ./backend
+    container_name: ufc-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app  # Hot-reloading for local development
+
+  frontend:
+    build: ./frontend
+    container_name: ufc-frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app # Hot-reloading for local development
+    depends_on:
+      - backend         # Ensures backend starts first
+    environment:
+      - API_URL=http://backend:8000  # How Streamlit will talk to FastAPI inside Docker
