@@ -6,6 +6,11 @@ import requests
 from bs4 import BeautifulSoup
 from comparison_table import render_comparison_table
 
+import os
+
+# DO NOT just put the string here. Use os.getenv!
+API_URL = os.getenv("API_URL", "http://backend:8000")
+
 
 # Set wide layout and dashboard title
 st.set_page_config(layout="wide", page_title="UFC Fight Predictor Dashboard")
@@ -25,9 +30,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
-
 
 
 # Load and clean fighter data
@@ -319,7 +321,7 @@ if predict_button:
         
         try:
             # 2. Call the FastAPI backend inside the Docker network
-            response = requests.post("http://backend:8000/predict", json=api_payload)
+            response = requests.post(API_URL, json=api_payload)
             response.raise_for_status()
             
             # 3. Parse the result
