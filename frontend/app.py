@@ -13,7 +13,7 @@ API_URL = os.getenv("API_URL", "http://backend:8000")
 
 
 # Set wide layout and dashboard title
-st.set_page_config(layout="wide", page_icon="🥊", page_title="UFC Fight Predictor Dashboard")
+st.set_page_config(layout="wide", page_icon="🥊", page_title="FightCast.app")
 st.markdown(
     """
     <h3 style='text-align:center; color:white; margin:0; padding:0;'>
