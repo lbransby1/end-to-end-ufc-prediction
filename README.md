@@ -16,17 +16,23 @@ To ensure high system reliability and low inference latency for the initial laun
 
 ## Future Work & Roadmap
 
-#### 🚀 Model Supercharging: The Ensemble Meta-Learner
+#### Dynamic Data Updates
+Currently, the application only predicts fights from a dataset gathered in mid 2025
+* Web Scraping: Retrieves the upcoming events, outputting AI predictions for each matchup
+* Auto Updating Dataset: Automatic weekly updates to scrape the outcomes and metrics from the latest matches
+
+#### Model Supercharging: The Ensemble Meta-Learner
 I am currently bench-testing a high-performance Ensemble Meta-Learner to maximize predictive accuracy.
 * The Tech: Stacking XGBoost, LightGBM, and Logistic Regression to capture subtle stylistic interactions that a single model might miss.
+* Tracking performance on Weights and Biases to select best performing models
 * Status: Research phase. View the experimental architecture and performance benchmarks here: [Link to your Ensemble Repo].
 
-#### 🧠 Explainable AI (XAI): SHAP & LLM Integration
+#### Explainable AI (XAI): SHAP & LLM Integration
 To transition from "Black Box" predictions to actionable insights:
 * Advanced Features: Implementing temporal pre-processing to provide more nuanced SHAP (SHapley Additive exPlanations) values at inference time.
 * Natural Language Explanations: Feeding high-impact SHAP values into an LLM (Large Language Model) to output human-readable fight breakdowns and prediction justifications.
 
-#### 🛠️ System Robustness: Unit Testing & CI/CD
+#### System Robustness: Unit Testing & CI/CD
 * Implementing a rigorous Unit Testing suite to validate model inputs/outputs and ensure edge-case fighters (e.g., debutants) don't break the inference pipeline.
 * Automating performance regression tests to ensure new model iterations outperform the baseline before deployment.
 
